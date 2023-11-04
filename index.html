@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="flex-container header column center">
+        <div class="heading">Etch-a-Sketch</div>
+        <!-- toolbar -->
+        <div class="toolbar flex-container center">
+            <!-- artboard bg color -->
+            <div class="artboard-bg-tool flex-container column center">
+                <div class="toolbar-text background flex-container center">Background</div>
+                <input class="color-selector" type="color" value="#ffffff"
+                name="Artboard Background Color" id="artboard-bg-color">
+            </div>
+            <!-- pencil -->
+            <div class="pencil-tool flex-container column center">
+                <div class="toolbar-text pencil flex-container">
+                    Pencil Colour
+                </div>
+                <input class="color-selector" type="color" name="Pen Color"
+                id="pencil-color">
+            </div>
+            <!-- color picker -->
+            <div class="flex-container column center">
+                <div class="toolbar-text picker flex-container">
+                    Color Picker
+                </div>
+                <button class="btn" id="eyedrop-btn">
+                    <img src="images/eyedrop.png" alt="Eyedrop" class="icon">
+                </button>
+            </div>
+            <!-- eraser -->
+            <div class="flex-container column center">
+                <div class="flex-container toolbar-text">Eraser</div>
+                <button class="btn" id="eraser-btn">
+                    <img src="images/eraser.png" alt="Eraser" class="icon">
+                </button>
+            </div>
+            <!-- Draw or shade mode -->
+            <div class="flex-container column center">
+                <div class="toolbar-text drawing-mode">Mode</div>
+                <div class="select drawing-mode">
+                    <select name="drawing-mode" id="drawing-mode">
+                        <option value="draw" class="dropdown-text">Draw</option>
+                        <option value="shade" class="dropdown-text">Shade</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER END -->
+
+    <!-- grid size slider -->
+    <div class="grid-range-slider flex-container column center">
+        <div class="toolbar-text grid-size">
+            Grid Size <span id="value"></span>
+        </div>
+        <div class="slider flex-container center">
+            <input type="range" min="1" max="100" value="24" name="grid-range"
+            id="grid-range">
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="artboard flex-container column" id="artboard-container">
+        <!-- js generated grids come here -->
+    </div>
+
+    <!-- clear button and gridlines toggle -->
+    <div class="bottom-toolbar flex-container center">
+        <button class="btn" id="clear-btn">Clear</button>
+        <!-- gridlines toggler -->
+        <div class="switch-btn flex-container center">
+            <label class="switch">
+                <input class="switch-input" type="checkbox" id="grid-toggle" />
+                <span class="switch-label" data-on="Grid On" data-off="Grid Off"></span> 
+                <span class="switch-handle"></span> 
+            </label>
+            <!-- <input type="checkbox" name="grid-toggle" id="grid-toggle"> -->
+        </div>
+    </div>
+</body>
+</html>
