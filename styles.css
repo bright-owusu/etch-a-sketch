@@ -242,8 +242,8 @@ input[type="range"]::-moz-range-thumb {
 
 /* artboard styling */
 .artboard.flex-container {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     margin-top: 1rem;
     /* flex-wrap: wrap; */
     border: 1px solid rgb(0, 0, 0);
